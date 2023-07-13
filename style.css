@@ -1,0 +1,29 @@
+.addBook > form {
+  /* @frellygisa _official to add a display:flex; and flex-direction:colum; and delete comment */
+}
+
+.addBook > form > input {
+    width: 20%;
+    margin-bottom: 1rem;
+}
+
+.addBook > form >button {
+  /* @wacoo to add a width of 10% and delete comment*/
+}
+
+.hr {
+  margin-top:1%;
+  margin-bottom: 0.2%;
+  border-bottom: 1px solid #000;
+  width: 20%;
+}
+
+#objectsContainer > div{
+  display: flex;
+  flex-direction: column;
+}
+
+#objectsContainer > div > input {
+
+  width: 5%;
+}
