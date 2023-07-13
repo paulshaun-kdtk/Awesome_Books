@@ -8,7 +8,7 @@
 }
 
 .addBook > form >button {
-  /* @wacoo to add a width of 10% and delete comment*/
+  width: 10%;
 }
 
 .hr {
