@@ -26,12 +26,12 @@ document.getElementById('toggleContactButton').addEventListener('click', () => {
 const savedObjects = new SavedObjects();
 window.addEventListener('load', savedObjects.initialize.bind(savedObjects));
 
-function displayCurrentTime() {
+const displayCurrentTime = () => {
   const now = DateTime.local();
   const formattedTime = now.toLocaleString(DateTime.TIME_SIMPLE);
   const formattedZone = now.toFormat('ZZZZ');
   const currentTimeElement = document.getElementById('currentTime');
   currentTimeElement.textContent = `${formattedTime} (${formattedZone})`;
-}
+};
 
 window.onload = displayCurrentTime;

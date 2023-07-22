@@ -10,19 +10,19 @@ class SavedObjects {
     this.submitButton.addEventListener('click', this.handleSubmit.bind(this));
   }
 
-  addObject(object) {
+  addObject = (object) => {
     this.objects.push(object);
     localStorage.setItem('savedObjects', JSON.stringify(this.objects));
   }
 
-  retrieveObjects() {
+  retrieveObjects = () => {
     const savedData = localStorage.getItem('savedObjects');
     if (savedData) {
       this.objects = JSON.parse(savedData);
     }
   }
 
-  displayObjects() {
+  displayObjects = () => {
     this.objectsContainer.innerHTML = '';
 
     this.objects.forEach((object, index) => {
@@ -50,12 +50,12 @@ class SavedObjects {
     });
   }
 
-  removeObject(index) {
+  removeObject = (index) => {
     this.objects.splice(index, 1);
     localStorage.setItem('savedObjects', JSON.stringify(this.objects));
   }
 
-  handleSubmit(event) {
+  handleSubmit = (event) => {
     event.preventDefault();
 
     const title = this.titleInput.value;
@@ -68,19 +68,19 @@ class SavedObjects {
     this.resetForm();
   }
 
-  showSuccessMessage() {
+  showSuccessMessage = () => {
     this.successMessage.style.display = 'block';
     setTimeout(() => {
       this.successMessage.style.display = 'none';
     }, 3000);
   }
 
-  resetForm() {
+  resetForm = () => {
     this.titleInput.value = '';
     this.descriptionInput.value = '';
   }
 
-  initialize() {
+  initialize = () => {
     this.retrieveObjects();
     this.displayObjects();
   }
